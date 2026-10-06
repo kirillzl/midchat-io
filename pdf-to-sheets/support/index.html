@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDF → Sheets Support · Midchat</title>
+<meta name="description" content="Support for PDF → Sheets.">
+<link rel="stylesheet" href="/css/site.css">
+<style>:root { --accent: #058578; }</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">midchat<span>.io</span></a>
+    <nav class="nav"><a href="/">Home</a><a href="/billfast/">BillFast</a><a href="/friday-pack/">Friday Pack</a><a href="/action-loop/">Action Loop</a><a href="/expense-sheet/">Expense Sheet</a><a href="/pdf-to-sheets/" class="active">PDF → Sheets</a><a href="/support/">Support</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="draft-banner"><strong>DRAFT — not yet published.</strong> Not legal advice; have privacy and terms reviewed before going live. Fill every <code>[PLACEHOLDER]</code> first.</p>
+<article class="legal">
+  <h1>PDF → Sheets — Support</h1>
+  <p>
+    Contact: <a href="mailto:support@midchat.io"><strong>support@midchat.io</strong></a>
+    · Typical response: within 3 business days
+    · Languages: English, Deutsch
+  </p>
+
+  <h2>What PDF → Sheets does</h2>
+  <p>Attach a PDF. Get every table in source order with cleaned headers, ISO dates, plain decimals, a preview, and a totals check. Multi-page tables are stitched.</p>
+  <ol><li>Detects tables in source order.</li><li>Stitches multi-page tables and removes repeated headers.</li><li>Normalizes dates and amounts; shows a preview and totals check.</li><li>Exports Excel or CSV (or chat CSV fallback).</li></ol><p><strong>Scanned PDFs:</strong> without a text layer, the skills-only version reports that OCR isn't available rather than guessing.</p>
+
+  <h2>How to use it</h2>
+  <p>Install from the ChatGPT Plugin Directory (link after approval), then try:</p>
+  <ul><li><code>Convert this PDF to Excel</code></li><li><code>Extract the tables from this PDF as CSV</code></li><li><code>Turn this bank statement PDF into a spreadsheet</code></li></ul>
+
+  <h2>Limitations</h2>
+  <ul><li>Skills-only version: text PDFs OK; scanned PDFs without a text layer are reported, not OCR'd.</li><li>Unreadable cells left empty and flagged.</li><li>Downloadable file only where ChatGPT can run code.</li><li>Does not edit/merge PDFs, convert to Word, or give tax/accounting advice.</li><li>Public Directory listing is planned only with the hosted MCP server — do not submit skills-only.</li></ul>
+
+  <h2>Troubleshooting</h2>
+  <table>
+    <thead><tr><th>Problem</th><th>Try</th></tr></thead>
+    <tbody><tr><td>No tables found</td><td>Confirm the PDF has a text layer; scans need the future MCP/OCR path.</td></tr><tr><td>Wrong columns</td><td>Ask to re-detect with a bank-statement or invoice-lines preset.</td></tr><tr><td>No Excel file</td><td>Ask for CSV, or wait for the hosted MCP export links.</td></tr></tbody>
+  </table>
+
+  <h2>Contact &amp; reporting problems</h2>
+  <p>
+    Email <a href="mailto:support@midchat.io">support@midchat.io</a> with: what you asked, what happened,
+    what you expected, and a screenshot (<strong>blur real names, addresses, bank details, and receipt totals</strong>).
+  </p>
+  <p class="muted">
+    Privacy: <a href="/pdf-to-sheets/privacy/">/pdf-to-sheets/privacy</a> ·
+    Terms: <a href="/pdf-to-sheets/terms/">/pdf-to-sheets/terms</a> ·
+    Suite support: <a href="/support/">/support</a>
+  </p>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <strong>Midchat</strong> — ChatGPT plugins for mid-conversation work.<br>
+      Published by Midchat · midchat.io
+    </div>
+    <div class="footer-links">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/support/">Support</a>
+      <a href="mailto:support@midchat.io">support@midchat.io</a>
+    </div>
+  </div>
+  <div class="wrap footer-note">
+    Draft site for midchat.io. Domain not registered by this build. Not legal advice.
+  </div>
+</footer>
+</body>
+</html>

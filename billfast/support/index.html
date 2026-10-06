@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BillFast Support · Midchat</title>
+<meta name="description" content="Support for BillFast.">
+<link rel="stylesheet" href="/css/site.css">
+<style>:root { --accent: #003DBC; }</style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="/">midchat<span>.io</span></a>
+    <nav class="nav"><a href="/">Home</a><a href="/billfast/" class="active">BillFast</a><a href="/friday-pack/">Friday Pack</a><a href="/action-loop/">Action Loop</a><a href="/expense-sheet/">Expense Sheet</a><a href="/pdf-to-sheets/">PDF → Sheets</a><a href="/support/">Support</a></nav>
+  </div>
+</header>
+<main class="wrap">
+
+<p class="draft-banner"><strong>DRAFT — not yet published.</strong> Not legal advice; have privacy and terms reviewed before going live. Fill every <code>[PLACEHOLDER]</code> first.</p>
+<article class="legal">
+  <h1>BillFast — Support</h1>
+  <p>
+    Contact: <a href="mailto:support@midchat.io"><strong>support@midchat.io</strong></a>
+    · Typical response: within 3 business days
+    · Languages: English, Deutsch
+  </p>
+
+  <h2>What BillFast does</h2>
+  <p>Paste notes, hours, or a timesheet into ChatGPT. BillFast turns them into a clean, tax-ready invoice — exact totals, VAT per rate, English or German.</p>
+  <ol><li>Reads your notes and proposes line items.</li><li>Asks for anything missing (rates, tax rate, invoice number, addresses, bank details) in one checklist.</li><li>Shows a draft table for you to confirm.</li><li>Calculates net, VAT per rate, discounts, and total to the cent.</li><li>Renders the invoice in English or German.</li></ol><p>It <strong>never invents</strong> amounts, hours, tax rates, invoice numbers, VAT IDs, IBANs, or addresses. Missing fields stay as visible placeholders like <code>[IBAN]</code> and the invoice is marked <strong>DRAFT</strong>.</p>
+
+  <h2>How to use it</h2>
+  <p>Install from the ChatGPT Plugin Directory (link after approval), then try:</p>
+  <ul><li><code>Create an invoice from these notes</code></li><li><code>Turn this timesheet into an invoice with 19% VAT</code></li><li><code>Generate an invoice PDF for this client</code></li><li><code>Rechnung auf Deutsch mit 19 % MwSt</code></li></ul>
+
+  <h2>Limitations</h2>
+  <ul><li>PDF file only where ChatGPT can run code; otherwise print-ready invoice in chat.</li><li>No memory across chats — client defaults aren't saved between conversations.</li><li>Does not send invoices, take payments, or connect to accounting/banking tools.</li><li>Human-readable invoice, not XRechnung/ZUGFeRD e-invoice.</li><li>Not tax advice — does not choose your VAT rate or tax status.</li></ul>
+
+  <h2>Troubleshooting</h2>
+  <table>
+    <thead><tr><th>Problem</th><th>Try</th></tr></thead>
+    <tbody><tr><td>No PDF appeared</td><td>Ask “render it as a PDF file”. If code execution isn't available, use the print-ready version.</td></tr><tr><td>Totals look wrong</td><td>Ask “show the math”. BillFast rounds per line, then tax per rate group.</td></tr><tr><td>Keeps asking questions</td><td>Deliberate for required fields. Say “make it a DRAFT with placeholders” to proceed.</td></tr><tr><td>Didn't activate</td><td>Mention BillFast directly or start with “Create an invoice from…”.</td></tr></tbody>
+  </table>
+
+  <h2>Contact &amp; reporting problems</h2>
+  <p>
+    Email <a href="mailto:support@midchat.io">support@midchat.io</a> with: what you asked, what happened,
+    what you expected, and a screenshot (<strong>blur real names, addresses, bank details, and receipt totals</strong>).
+  </p>
+  <p class="muted">
+    Privacy: <a href="/billfast/privacy/">/billfast/privacy</a> ·
+    Terms: <a href="/billfast/terms/">/billfast/terms</a> ·
+    Suite support: <a href="/support/">/support</a>
+  </p>
+</article>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div>
+      <strong>Midchat</strong> — ChatGPT plugins for mid-conversation work.<br>
+      Published by Midchat · midchat.io
+    </div>
+    <div class="footer-links">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/support/">Support</a>
+      <a href="mailto:support@midchat.io">support@midchat.io</a>
+    </div>
+  </div>
+  <div class="wrap footer-note">
+    Draft site for midchat.io. Domain not registered by this build. Not legal advice.
+  </div>
+</footer>
+</body>
+</html>
