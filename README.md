@@ -1,6 +1,6 @@
 # midchat.io — public site pack
 
-Static HTML for the Midchat ChatGPT plugin suite. **Domain not registered by this build. Not deployed.**
+Static HTML for the Midchat ChatGPT plugin suite. **Live on GitHub Pages** (`kirillzl/midchat-io`). HTTP serving; HTTPS cert may still be provisioning.
 
 ## Local preview
 
@@ -21,22 +21,18 @@ python3 -m http.server 8080
 - `apply_all_urls.py` — patch all five manifests + rebuild `dist/*.zip`  
 - `_build_site.py` — regenerate HTML from content (optional)
 
-## Placeholders to fill before publish
+## Publisher / contacts
 
-- `[PUBLISHER NAME]` (privacy/terms)  
-- `[DATE OF PUBLICATION]`  
-- `[HOSTING PROVIDER …]` + privacy link  
-- Legal review of privacy and terms (not legal advice)
+- Brand: **Midchat** (no personal name on the site)  
+- `support@midchat.io`, `privacy@midchat.io`  
+- Hosting: GitHub Pages  
+- Impressum: not published (publisher choice)
 
-Contacts already set: `support@midchat.io`, `privacy@midchat.io`.
+## Before Directory submit
 
-## Before going live
-
-1. Register **midchat.io** (and optionally email / Google Workspace for the two inboxes).  
-2. Point DNS to a static host (Cloudflare Pages, Netlify, Vercel, or similar) in an EU-friendly setup if possible.  
-3. Fill placeholders → legal pass → deploy this folder as the site root.  
-4. Open every URL in a private window (HTTPS, no login).  
-5. Run `python3 sites/midchat.io/apply_all_urls.py` (if not already) → smoke-test plugins → Directory submit order: BillFast → Friday Pack → Action Loop; hold PDF → Sheets for MCP; private-test Expense Sheet.  
-6. Later: deploy MCP at `https://mcp.midchat.io/mcp` (see `dist/pdf-to-sheets-mcp-next-steps.md`).
+1. Confirm **HTTPS** works on midchat.io and turn on Enforce HTTPS in GitHub Pages settings.  
+2. Legal pass on privacy/terms if needed.  
+3. Run `python3 sites/midchat.io/apply_all_urls.py` → smoke-test plugins → Directory submit order: BillFast → Friday Pack → Action Loop; hold PDF → Sheets for MCP; private-test Expense Sheet.  
+4. Later: deploy MCP at `https://mcp.midchat.io/mcp` (see `dist/pdf-to-sheets-mcp-next-steps.md`).
 
 Zip of this pack: `dist/midchat-io-site.zip`.
