@@ -13,7 +13,7 @@ python3 -m http.server 8080
 ## Layout
 
 - `/` — suite landing  
-- `/billfast/`, `/friday-pack/`, `/action-loop/`, `/expense-sheet/`, `/pdf-to-sheets/` — each with `privacy/`, `terms/`, `support/`  
+- `/mizar/`, `/lyra/`, `/kaus/`, `/alcor/`, `/vela/` — each with `privacy/`, `terms/`, `support/`  
 - `/privacy`, `/terms`, `/support` — suite-level  
 - `css/site.css` — shared styles (plugin brand accents)  
 - `assets/*.png` — plugin icons  
@@ -32,7 +32,7 @@ python3 -m http.server 8080
 
 1. ✅ HTTPS + Enforce HTTPS confirmed.  
 2. Legal pass on privacy/terms if needed.  
-3. Run `python3 sites/midchat.io/apply_all_urls.py` → smoke-test plugins → Directory submit order: BillFast → Friday Pack → Action Loop; hold PDF → Sheets for MCP; private-test Expense Sheet.  
-4. Later: deploy MCP at `https://mcp.midchat.io/mcp` (see `dist/pdf-to-sheets-mcp-next-steps.md`).
+3. Run `python3 sites/midchat.io/apply_all_urls.py` → smoke-test plugins → Directory submit order: Mizar → Lyra → Kaus; hold Vela for MCP; private-test Alcor.  
+4. Later: deploy MCP at `https://mcp.midchat.io/mcp` (see `dist/vela-mcp-next-steps.md`).
 
 Zip of this pack: `dist/midchat-io-site.zip`.

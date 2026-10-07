@@ -7,7 +7,7 @@ Every listing URL must be **HTTPS**, publicly reachable without login, ≤1024 c
 
 Emails: `support@midchat.io` · `privacy@midchat.io`  
 Publisher: Midchat (midchat.io)  
-Planned MCP (PDF → Sheets only, **not live**): `https://mcp.midchat.io/mcp`
+Planned MCP (Vela only, **not live**): `https://mcp.midchat.io/mcp`
 
 ---
 
@@ -24,65 +24,65 @@ Planned MCP (PDF → Sheets only, **not live**): `https://mcp.midchat.io/mcp`
 
 ## Per-plugin listing URLs → `extensions.com.openai.interface`
 
-### BillFast (`billfast/plugin.json`) — submit skills-only after pages live
+### Mizar (`mizar/plugin.json`) — submit skills-only after pages live
 
 | JSON field | URL |
 | --- | --- |
-| `websiteURL` | `https://midchat.io/billfast/` |
-| `supportURL` | `https://midchat.io/billfast/support/` |
-| `privacyPolicyURL` | `https://midchat.io/billfast/privacy/` |
-| `termsOfServiceURL` | `https://midchat.io/billfast/terms/` |
-| `homepage` (root) | `https://midchat.io/billfast/` |
+| `websiteURL` | `https://midchat.io/mizar/` |
+| `supportURL` | `https://midchat.io/mizar/support/` |
+| `privacyPolicyURL` | `https://midchat.io/mizar/privacy/` |
+| `termsOfServiceURL` | `https://midchat.io/mizar/terms/` |
+| `homepage` (root) | `https://midchat.io/mizar/` |
 | `author.url` | `https://midchat.io/` |
 | `author.email` | `support@midchat.io` |
 
-### Friday Pack (`friday-pack/plugin.json`) — submit skills-only
+### Lyra (`lyra/plugin.json`) — submit skills-only
 
 | JSON field | URL |
 | --- | --- |
-| `websiteURL` | `https://midchat.io/friday-pack/` |
-| `supportURL` | `https://midchat.io/friday-pack/support/` |
-| `privacyPolicyURL` | `https://midchat.io/friday-pack/privacy/` |
-| `termsOfServiceURL` | `https://midchat.io/friday-pack/terms/` |
-| `homepage` | `https://midchat.io/friday-pack/` |
+| `websiteURL` | `https://midchat.io/lyra/` |
+| `supportURL` | `https://midchat.io/lyra/support/` |
+| `privacyPolicyURL` | `https://midchat.io/lyra/privacy/` |
+| `termsOfServiceURL` | `https://midchat.io/lyra/terms/` |
+| `homepage` | `https://midchat.io/lyra/` |
 | `author.url` | `https://midchat.io/` |
 | `author.email` | `support@midchat.io` |
 
-### Action Loop (`action-loop/plugin.json`) — submit skills-only
+### Kaus (`kaus/plugin.json`) — submit skills-only
 
 | JSON field | URL |
 | --- | --- |
-| `websiteURL` | `https://midchat.io/action-loop/` |
-| `supportURL` | `https://midchat.io/action-loop/support/` |
-| `privacyPolicyURL` | `https://midchat.io/action-loop/privacy/` |
-| `termsOfServiceURL` | `https://midchat.io/action-loop/terms/` |
-| `homepage` | `https://midchat.io/action-loop/` |
+| `websiteURL` | `https://midchat.io/kaus/` |
+| `supportURL` | `https://midchat.io/kaus/support/` |
+| `privacyPolicyURL` | `https://midchat.io/kaus/privacy/` |
+| `termsOfServiceURL` | `https://midchat.io/kaus/terms/` |
+| `homepage` | `https://midchat.io/kaus/` |
 | `author.url` | `https://midchat.io/` |
 | `author.email` | `support@midchat.io` |
 
-### Expense Sheet (`expense-sheet/plugin.json`) — private-test first
+### Alcor (`alcor/plugin.json`) — private-test first
 
 | JSON field | URL |
 | --- | --- |
-| `websiteURL` | `https://midchat.io/expense-sheet/` |
-| `supportURL` | `https://midchat.io/expense-sheet/support/` |
-| `privacyPolicyURL` | `https://midchat.io/expense-sheet/privacy/` |
-| `termsOfServiceURL` | `https://midchat.io/expense-sheet/terms/` |
-| `homepage` | `https://midchat.io/expense-sheet/` |
+| `websiteURL` | `https://midchat.io/alcor/` |
+| `supportURL` | `https://midchat.io/alcor/support/` |
+| `privacyPolicyURL` | `https://midchat.io/alcor/privacy/` |
+| `termsOfServiceURL` | `https://midchat.io/alcor/terms/` |
+| `homepage` | `https://midchat.io/alcor/` |
 | `author.url` | `https://midchat.io/` |
 | `author.email` | `support@midchat.io` |
 
-### PDF → Sheets (`pdf-to-sheets/plugin.json`) — **do not Directory-submit skills-only**
+### Vela (`vela/plugin.json`) — **do not Directory-submit skills-only**
 
-Wire the four site URLs into `plugin.json` for when you build the **MCP release ZIP** (via `build_with_mcp_zip.py --release`). Keep skills-only `dist/pdf-to-sheets.zip` **without** `mcp.json`.
+Wire the four site URLs into `plugin.json` for when you build the **MCP release ZIP** (via `build_with_mcp_zip.py --release`). Keep skills-only `dist/vela.zip` **without** `mcp.json`.
 
 | JSON field | URL |
 | --- | --- |
-| `websiteURL` | `https://midchat.io/pdf-to-sheets/` |
-| `supportURL` | `https://midchat.io/pdf-to-sheets/support/` |
-| `privacyPolicyURL` | `https://midchat.io/pdf-to-sheets/privacy/` |
-| `termsOfServiceURL` | `https://midchat.io/pdf-to-sheets/terms/` |
-| `homepage` | `https://midchat.io/pdf-to-sheets/` |
+| `websiteURL` | `https://midchat.io/vela/` |
+| `supportURL` | `https://midchat.io/vela/support/` |
+| `privacyPolicyURL` | `https://midchat.io/vela/privacy/` |
+| `termsOfServiceURL` | `https://midchat.io/vela/terms/` |
+| `homepage` | `https://midchat.io/vela/` |
 | `author.url` | `https://midchat.io/` |
 | `author.email` | `support@midchat.io` |
 
@@ -104,10 +104,10 @@ python3 sites/midchat.io/apply_all_urls.py
 python3 sites/midchat.io/apply_all_urls.py --domain midchat.io --email support@midchat.io
 ```
 
-Patches all five `plugin.json` files (backup → `plugin.json.bak`), rebuilds skills-only `dist/<name>.zip` via `tools/build_dist.py` (**excludes** `.mcp.json` / `mcp.json` / `mcp-server/` / `submit-prep/`). PDF → Sheets stays skills-only without MCP.
+Patches all five `plugin.json` files (backup → `plugin.json.bak`), rebuilds skills-only `dist/<name>.zip` via `tools/build_dist.py` (**excludes** `.mcp.json` / `mcp.json` / `mcp-server/` / `submit-prep/`). Vela stays skills-only without MCP.
 
 ---
 
 ## Trailing slashes
 
-This static pack uses directory `index.html` URLs with trailing slashes (`/billfast/`). Most static hosts redirect both forms; prefer the trailing-slash form in manifests for consistency with this pack.
+This static pack uses directory `index.html` URLs with trailing slashes (`/mizar/`). Most static hosts redirect both forms; prefer the trailing-slash form in manifests for consistency with this pack.
