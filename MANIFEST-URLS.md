@@ -1,7 +1,7 @@
 # Midchat.io — URL map for plugin.json listing fields
 
 **Domain:** `midchat.io` (GitHub Pages, repo `kirillzl/midchat-io`)  
-**Status:** HTTP live. HTTPS certificate may still be provisioning — manifests already use `https://…` as OpenAI requires; confirm padlock + Enforce HTTPS before Directory submit. Publisher brand **Midchat**. Impressum / personal address **not published** (publisher choice). `[PUBLISHER NAME]` placeholders removed from privacy/terms.
+**Status:** HTTPS live + Enforce HTTPS (2026-10-07). Publisher brand **Midchat**. Impressum / personal address **not published** (publisher choice).
 
 Every listing URL must be **HTTPS**, publicly reachable without login, ≤1024 chars, and identify the same publisher as your verified OpenAI developer identity.
 
