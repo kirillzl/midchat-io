@@ -1,6 +1,6 @@
 # midchat.io — public site pack
 
-Static HTML for the Midchat ChatGPT plugin suite. **Live on GitHub Pages** (`kirillzl/midchat-io`). HTTP serving; HTTPS cert may still be provisioning.
+Static HTML for the Midchat ChatGPT plugin suite. **Live on GitHub Pages** (`kirillzl/midchat-io`). HTTPS + Enforce HTTPS enabled.
 
 ## Local preview
 
@@ -30,7 +30,7 @@ python3 -m http.server 8080
 
 ## Before Directory submit
 
-1. Confirm **HTTPS** works on midchat.io and turn on Enforce HTTPS in GitHub Pages settings.  
+1. ✅ HTTPS + Enforce HTTPS confirmed.  
 2. Legal pass on privacy/terms if needed.  
 3. Run `python3 sites/midchat.io/apply_all_urls.py` → smoke-test plugins → Directory submit order: BillFast → Friday Pack → Action Loop; hold PDF → Sheets for MCP; private-test Expense Sheet.  
 4. Later: deploy MCP at `https://mcp.midchat.io/mcp` (see `dist/pdf-to-sheets-mcp-next-steps.md`).
