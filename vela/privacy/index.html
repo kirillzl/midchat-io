@@ -13,7 +13,7 @@
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="logo" href="/">midchat<span>.io</span></a>
-    <nav class="nav"><a href="/">Home</a><a href="/mizar/">Mizar</a><a href="/lyra/">Lyra</a><a href="/kaus/">Kaus</a><a href="/alcor/">Alcor</a><a href="/vela/" class="active">Vela</a><a href="/support/">Support</a></nav>
+    <nav class="nav"><a href="/">Home</a><a href="/mizar/">Mizar</a><a href="/lyra/">Lyra</a><a href="/vela/">Kaus</a><a href="/alcor/">Alcor</a><a href="/vela/" class="active">Vela</a><a href="/support/">Support</a></nav>
   </div>
 </header>
 <main class="wrap">
@@ -21,7 +21,7 @@
 <p class="draft-banner"><strong>Live site — legal review recommended.</strong> Not legal advice; have privacy and terms reviewed for your jurisdiction.</p>
 <article class="legal">
   <h1>Vela — Privacy Policy</h1>
-  <p class="muted">Last updated: 6 October 2026</p>
+  <p class="muted">Last updated: 27 October 2026 (version 1.1.0, hosted server)</p>
 
   <h2>Who we are</h2>
   <p>
@@ -32,24 +32,35 @@
 
   <h2>The short version</h2>
   <ul>
-    <li>Vela’s public package today is primarily <strong>skills-only</strong>: instructions and small scripts that run <strong>inside ChatGPT</strong>.</li>
-    <li>For skills-only use, Midchat has <strong>no server that receives your chat content</strong>. We do not see the files or text you process with the plugin.</li>
-    <li>Your conversation and uploads are processed by <strong>OpenAI</strong> under OpenAI’s terms and privacy policy: <a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>.</li>
-    <li>We only process personal data if <strong>you contact us</strong> (support/privacy email) or visit this website.</li>
+    <li>From version 1.1.0, Vela uses a <strong>Midchat server</strong> (<code>vela.mcp.midchat.io</code>) to find the tables in the text of your PDF, normalise numbers and dates, check totals and balances, and lay out the extraction report and CSV.</li>
+    <li>ChatGPT sends that server <strong>only the document text and table data needed for the export</strong> (see below) when Vela’s tools are used. No account, no sign-in.</li>
+    <li>We <strong>do not store</strong> document content: each request is processed in memory and discarded when the response is sent. We keep <strong>no database, no files, and no logs of document content</strong>; the server does not download or keep your PDF.</li>
+    <li>We do not sell your data, use it for advertising, or use it to train models.</li>
+    <li>Your conversation itself is processed by <strong>OpenAI</strong> under OpenAI’s terms and privacy policy: <a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>.</li>
   </ul>
 
-  <h2>What Vela does with your data inside ChatGPT</h2>
-  <p>When you use Vela you may upload PDFs that contain bank statements, invoices, or reports. In the current skills-only package, processing stays inside ChatGPT. A future hosted MCP version will download PDFs from ChatGPT, process them in memory on an EU server, <strong>not store</strong> the source PDF, and delete generated exports within 24 hours. That hosted version is not live yet; when it is, this policy will be updated before launch.</p>
-  <p>
-    Whether chats and files are stored, for how long, and whether they are used to improve OpenAI’s models
-    is governed by <strong>your ChatGPT account settings and OpenAI’s policies</strong>, not by us.
-    Tip: only share data the task actually needs.
-  </p>
+  <h2>What the server receives</h2>
+  <p>When ChatGPT calls a Vela tool it sends content from the conversation: the text of your PDF as extracted by ChatGPT or pasted by you (for example a bank statement, invoice or report, which can include names, addresses, account numbers such as IBANs, transactions and amounts), the table rows and values derived from it, printed totals or balances, and optional sheet names, column renames and format choices. Vela’s tools do <strong>not</strong> receive the PDF file itself, your chat history, location, or account identifiers.</p>
+  <p>Vela does <strong>not</strong> upload files, email exports, sync to Google Drive or Sheets, or connect to your bank or other accounts.</p>
 
-  <h2>Data we do process (outside ChatGPT)</h2>
+  <h2>Data we process</h2>
   <table>
     <thead><tr><th>Situation</th><th>Data</th><th>Purpose</th><th>Legal basis (GDPR)</th><th>Retention</th></tr></thead>
     <tbody>
+      <tr>
+        <td>Tool calls (detect tables, normalise numbers, check rows, format CSV)</td>
+        <td>the document content listed above</td>
+        <td>produce the tables and CSV you asked for</td>
+        <td>Art. 6(1)(b)</td>
+        <td>none — discarded after the response</td>
+      </tr>
+      <tr>
+        <td>Server operation</td>
+        <td>technical request metadata in our host’s runtime logs (IP address, user agent, time, path, status); request bodies are not logged</td>
+        <td>security, abuse prevention, troubleshooting</td>
+        <td>Art. 6(1)(f)</td>
+        <td>1 day (Vercel Pro runtime-log retention)</td>
+      </tr>
       <tr>
         <td>You email support or privacy</td>
         <td>email address, name, message, attachments</td>
@@ -59,35 +70,42 @@
       </tr>
       <tr>
         <td>You visit our website</td>
-        <td>technical data processed by our hosting provider (e.g. IP, browser, time)</td>
-        <td>deliver and secure the site</td>
+        <td>technical data processed by our hosting provider (e.g. IP, browser, time); a cookieless page-view count (site name, hostname, event type)</td>
+        <td>deliver and secure the site; count visits</td>
         <td>Art. 6(1)(f)</td>
-        <td>per hosting provider: GitHub Pages — https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement</td>
+        <td>per hosting provider: GitHub Pages — https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement; page-view counts are aggregate and set no cookies</td>
       </tr>
     </tbody>
   </table>
   <p>
     OpenAI may make aggregated plugin metrics available to us as publisher.
-    We do not receive your conversation content through the skills-only plugin.
-    We do not sell personal data or use it for advertising.
-    [ADJUST if your site host or analytics sets cookies.]
+    We do not sell personal data or use it for advertising, and our website sets no cookies.
   </p>
-  <p><strong>Please don’t email real invoices, bank statements, or full receipts</strong> unless needed; blur sensitive values.</p>
+  <p>Tip: only share the pages and tables you need. Please don’t email real bank statements or invoices to support unless needed; blur names, account numbers and other sensitive values.</p>
+
+  <h2>Sub-processors and recipients</h2>
+  <ul>
+    <li><strong>Vercel Inc.</strong> — hosting of <code>vela.mcp.midchat.io</code>; compute region Frankfurt, Germany (EU). Vercel is a US company; transfers are covered by the EU–US Data Privacy Framework / Standard Contractual Clauses under Vercel’s DPA.</li>
+    <li><strong>GitHub, Inc.</strong> — website hosting.</li>
+    <li><strong>OpenAI</strong> — processes your ChatGPT conversation under its own terms.</li>
+  </ul>
+
+  <h2>Restricted data</h2>
+  <p>Do not include card numbers, passwords, health data, or government ID numbers in documents you process; Vela does not need them.</p>
 
   <h2>Your rights (EU/EEA)</h2>
   <p>
-    For data we hold (e.g. support emails) you have rights of access, rectification, erasure, restriction,
-    portability, and objection (Art. 15–21 GDPR). Contact <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>.
+    You have rights of access, rectification, erasure, restriction, portability, and objection
+    (Art. 15–21 GDPR). Contact <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>.
+    Because we do not store document content, there is usually nothing for us to retrieve or delete beyond
+    short-lived host logs and support emails.
     For ChatGPT conversation data, exercise rights with OpenAI — we cannot access or delete it.
     You may also complain to a data protection supervisory authority, in particular in the EU member state
     where you live or work.
   </p>
 
-  <h2>Future hosted / MCP version</h2>
-  <p>Planned MCP endpoint: <code>https://mcp.midchat.io/mcp</code> (not live). EU hosting, one instance, no OCR vendor in the first MCP release unless separately disclosed. Submitting a skills-only Directory listing first would prevent adding MCP to the same listing — so Vela will launch publicly only with MCP.</p>
-
   <h2>Changes</h2>
-  <p>We’ll update this page when the product changes and adjust the “Last updated” date.</p>
+  <p>We’ll update this page when the product changes, adjust the “Last updated” date, and note material changes in the plugin’s release notes.</p>
 
   <p class="muted">
     Suite privacy overview: <a href="/privacy/">/privacy</a> ·

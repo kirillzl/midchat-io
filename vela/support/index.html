@@ -28,20 +28,20 @@
   </p>
 
   <h2>What Vela does</h2>
-  <p>Attach a PDF. Get every table in source order with cleaned headers, ISO dates, plain decimals, a preview, and a totals check. Multi-page tables are stitched.</p>
-  <ol><li>Detects tables in source order.</li><li>Stitches multi-page tables and removes repeated headers.</li><li>Normalizes dates and amounts; shows a preview and totals check.</li><li>Exports Excel or CSV (or chat CSV fallback).</li></ol><p><strong>Scanned PDFs:</strong> without a text layer, the skills-only version reports that OCR isn't available rather than guessing.</p>
+  <p>Vela turns PDF tables into spreadsheet data: attach a text-based PDF and get every table in source order with cleaned headers, ISO dates, plain decimals, a preview, a totals check and a CSV. Multi-page tables are stitched.</p>
+  <ol><li>Detects tables in source order.</li><li>Stitches multi-page tables and removes repeated headers.</li><li>Normalizes dates and amounts; shows a preview and checks totals and balances.</li><li>Returns a CSV per table (standard or German format).</li></ol><p><strong>Scanned PDFs:</strong> without a text layer, Vela reports that OCR isn't available rather than guessing.</p>
 
   <h2>How to use it</h2>
   <p>Install from the ChatGPT Plugin Directory (link after approval), then try:</p>
   <ul><li><code>Convert this PDF to Excel</code></li><li><code>Extract the tables from this PDF as CSV</code></li><li><code>Turn this bank statement PDF into a spreadsheet</code></li></ul>
 
   <h2>Limitations</h2>
-  <ul><li>Skills-only version: text PDFs OK; scanned PDFs without a text layer are reported, not OCR'd.</li><li>Unreadable cells left empty and flagged.</li><li>Downloadable file only where ChatGPT can run code.</li><li>Does not edit/merge PDFs, convert to Word, or give tax/accounting advice.</li><li>Public Directory listing is planned only with the hosted MCP server — do not submit skills-only.</li></ul>
+  <ul><li>Works on the PDF’s text: scanned PDFs without a text layer are reported, not OCR’d.</li><li>Designed to keep values as they appear in the PDF: unclear cells and ambiguous dates are flagged instead of guessed, and totals mismatches are reported, not corrected. Please compare the result with your PDF.</li><li>Returns copy-paste CSV (standard or German format); a downloadable file only where ChatGPT can run code.</li><li>No memory across chats; document content is not stored.</li><li>Uses Midchat’s hosted tools at vela.mcp.midchat.io (no sign-in). Does not edit/merge PDFs, convert to Word, upload files, or give tax/accounting advice.</li></ul>
 
   <h2>Troubleshooting</h2>
   <table>
     <thead><tr><th>Problem</th><th>Try</th></tr></thead>
-    <tbody><tr><td>No tables found</td><td>Confirm the PDF has a text layer; scans need the future MCP/OCR path.</td></tr><tr><td>Wrong columns</td><td>Ask to re-detect with a bank-statement or invoice-lines preset.</td></tr><tr><td>No Excel file</td><td>Ask for CSV, or wait for the hosted MCP export links.</td></tr></tbody>
+    <tbody><tr><td>No tables found</td><td>Confirm the PDF has a text layer (scans aren’t OCR’d); try a text-based export from your bank or tool.</td></tr><tr><td>Wrong columns</td><td>Ask to re-detect with a bank-statement or invoice-lines preset, or name the columns.</td></tr><tr><td>Need Excel</td><td>Paste the CSV into Excel or Google Sheets; ask for the German format for Excel DE.</td></tr></tbody>
   </table>
 
   <h2>Contact &amp; reporting problems</h2>
