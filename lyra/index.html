@@ -7,10 +7,10 @@
 (function(){try{var q=new URLSearchParams(location.search).get("theme");var t=(q==="light"||q==="dark")?q:localStorage.getItem("midchat-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
 </script>
 <title>Lyra · Midchat</title>
-<meta name="description" content="Paste bullets, notes, or a metrics CSV. Lyra drafts a short client email and a one-pager: wins, progress, blockers, risks, and next steps. Direct, no fluff.">
+<meta name="description" content="Lyra: This week’s client update.">
 <link rel="canonical" href="https://midchat.io/lyra/">
 <meta property="og:title" content="Lyra · Midchat">
-<meta property="og:description" content="Paste bullets, notes, or a metrics CSV. Lyra drafts a short client email and a one-pager: wins, progress, blockers, risks, and next steps. Direct, no fluff.">
+<meta property="og:description" content="Lyra: This week’s client update.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://midchat.io/lyra/">
 <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
@@ -31,72 +31,29 @@
 <main id="content">
 
 <div class="wrap app-page" style="--accent:#7A3FF0">
-  <p class="crumb"><a href="/">Midchat</a> / Lyra</p>
-  <header class="app-hero">
-    <div class="app-intro">
-      <span class="icon-frame lg" style="--accent:#7A3FF0"><img src="/assets/lyra.png" alt="" width="104" height="104"></span>
-      <div>
-        <p class="kicker"><span class="pip" aria-hidden="true"></span> Friday update · in review</p>
-        <h1>Lyra</h1>
-        <p class="lede">Write this week’s client update.</p>
-        <p>Paste bullets, notes, or a metrics CSV. Lyra drafts a short client email and a one-pager: wins, progress, blockers, risks, and next steps. Direct, no fluff.</p>
-        <blockquote class="say"><span class="say-label">Try saying</span><q>write my weekly client update</q></blockquote>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#lyra-demo">Watch the demo</a>
-          <span class="btn btn-soon" data-chatgpt="lyra">Coming soon to ChatGPT</span>
-        </div>
-        <p class="muted">In review with OpenAI. Not in the ChatGPT directory yet. <a href="/lyra/support/">Support</a></p>
-      </div>
+  <header class="app-top">
+    <span class="icon-frame lg" style="--accent:#7A3FF0"><img src="/assets/lyra.png" alt="" width="80" height="80"></span>
+    <div>
+      <h1>Lyra</h1>
+      <p class="app-line">This week’s client update.</p>
     </div>
-    <figure class="player player-stage" id="lyra-demo">
-  <button class="player-btn" type="button" data-video="/lyra/demo/lyra-demo.mp4" data-title="Lyra demo: notes to a weekly client update">
-    <span class="icon-frame md" style="--accent:#7A3FF0"><img src="/assets/lyra.png" alt="" width="64" height="64"></span>
-    <span class="play-glyph" aria-hidden="true"></span>
-    <span class="player-label"><strong>Watch the demo</strong><span class="player-note">Plays on click.</span></span>
-  </button>
-  <figcaption><a class="player-file" href="/lyra/demo/lyra-demo.mp4">Open the video file</a></figcaption>
-</figure>
   </header>
-
-  <section>
-    <h2>Why it is worth opening</h2>
-    <ul class="bullets"><li><strong>Email and a one-pager</strong>Client-ready copy and a structured status in one pass.</li><li><strong>The sections people actually read</strong>Wins, progress, blockers, risks, and next steps.</li><li><strong>Your numbers, not invented ones</strong>It is built to ask when an owner, a date, or a figure is missing.</li><li><strong>You send it</strong>Nothing is emailed or posted for you.</li></ul>
-  </section>
-
-  <section>
-    <h2>How it works</h2>
-    <ol class="steps"><li>Paste this week’s notes, bullets, or metrics.</li><li>Confirm the audience, the tone, and anything that is missing.</li><li>Copy the email draft and the one-pager into your own tools.</li></ol>
-  </section>
-
-  <section id="try">
-    <h2>Say it like this</h2>
-    <ul class="prompt-list"><li><code>write my weekly client update</code></li><li><code>write a weekly status report for the client from these notes</code></li><li><code>turn this update into a client email</code></li><li><code>Friday status report — include risks and next steps</code></li></ul>
-  </section>
-
-  <section>
-    <h2>What you get</h2>
-    <div class="example">Subject: Week of Oct 6 — Acme redesign<br>Wins · Progress · Blockers · Risks · Next steps — then a 5-line email.</div>
-  </section>
-
-  <section>
-    <h2>Good to know</h2>
-    <ul class="know"><li>Built not to add metrics, owners, or dates you did not give. Missing ones show as TBD. Review each draft before you send it.</li><li>Does not send email or post to Slack.</li><li>No memory across chats. Report content is not stored.</li><li>Uses Midchat’s hosted tools at lyra.mcp.midchat.io, with no sign-in. No other integrations.</li></ul>
-    <p class="fine-print">Free. Runs inside ChatGPT with Midchat’s hosted tools. No sign-in. See <a href="/lyra/privacy/">Privacy</a> · <a href="/lyra/terms/">Terms</a> · <a href="/lyra/support/">Support</a>.</p>
-  </section>
-
-  <section>
-    <h2>The other apps</h2>
-    <nav class="more-apps" aria-label="Other Midchat apps"><a href="/mizar/" style="--accent:#0841E7"><span class="icon-frame" style="--accent:#0841E7"><img src="/assets/mizar.png" alt="" width="36" height="36"></span>Mizar</a><a href="/kaus/" style="--accent:#E06A2B"><span class="icon-frame" style="--accent:#E06A2B"><img src="/assets/kaus.png" alt="" width="36" height="36"></span>Kaus</a><a href="/alcor/" style="--accent:#0C8F62"><span class="icon-frame" style="--accent:#0C8F62"><img src="/assets/alcor.png" alt="" width="36" height="36"></span>Alcor</a><a href="/vela/" style="--accent:#0B6FD4"><span class="icon-frame" style="--accent:#0B6FD4"><img src="/assets/vela.png" alt="" width="36" height="36"></span>Vela</a></nav>
-  </section>
+  <figure class="player player-stage" id="lyra-demo">
+  <button class="player-btn" type="button" data-video="/lyra/demo/lyra-demo.mp4" data-title="Lyra demo" aria-label="Watch the Lyra demo">
+    <span class="play-glyph" aria-hidden="true"></span>
+  </button>
+  <noscript><a href="/lyra/demo/lyra-demo.mp4">Watch the lyra demo</a></noscript>
+</figure>
+  <h2 class="sr-only">Try saying</h2>
+  <ul class="prompt-list"><li><q>write my weekly client update</q></li><li><q>turn this update into a client email</q></li><li><q>Friday status — include risks and next steps</q></li></ul>
+  <div class="app-cta"><span class="btn btn-soon" data-chatgpt="lyra">Coming soon to ChatGPT</span></div>
+  <p class="fine-print"><a href="/lyra/privacy/">Privacy</a> · <a href="/lyra/terms/">Terms</a> · <a href="/lyra/support/">Support</a></p>
 </div>
 
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <div>
-      <strong>Midchat</strong>
-      <p>Weekly workflows, done inside ChatGPT. Published by Midchat · midchat.io.</p>
-    </div>
+    <strong>Midchat</strong>
     <nav class="footer-links" aria-label="Footer">
       <a href="/mizar/">Mizar</a>
       <a href="/lyra/">Lyra</a>
@@ -110,9 +67,7 @@
     </nav>
   </div>
   <div class="wrap footer-note">
-    Published by Midchat · midchat.io.
-    Privacy questions: <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>.
-    Legal review of privacy and terms is recommended. Not legal advice.
+    Published by Midchat · midchat.io · <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>. Not legal advice.
   </div>
 </footer>
 <script src="/js/config.js"></script>

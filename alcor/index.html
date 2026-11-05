@@ -7,10 +7,10 @@
 (function(){try{var q=new URLSearchParams(location.search).get("theme");var t=(q==="light"||q==="dark")?q:localStorage.getItem("midchat-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
 </script>
 <title>Alcor · Midchat</title>
-<meta name="description" content="Attach receipt photos or PDFs, or paste the text. Alcor gives one row per receipt — date, merchant, gross, VAT, net, currency, category — plus a review list, totals,.">
+<meta name="description" content="Alcor: Receipts become expenses.">
 <link rel="canonical" href="https://midchat.io/alcor/">
 <meta property="og:title" content="Alcor · Midchat">
-<meta property="og:description" content="Attach receipt photos or PDFs, or paste the text. Alcor gives one row per receipt — date, merchant, gross, VAT, net, currency, category — plus a review list, totals,.">
+<meta property="og:description" content="Alcor: Receipts become expenses.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://midchat.io/alcor/">
 <meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
@@ -31,72 +31,29 @@
 <main id="content">
 
 <div class="wrap app-page" style="--accent:#0C8F62">
-  <p class="crumb"><a href="/">Midchat</a> / Alcor</p>
-  <header class="app-hero">
-    <div class="app-intro">
-      <span class="icon-frame lg" style="--accent:#0C8F62"><img src="/assets/alcor.png" alt="" width="104" height="104"></span>
-      <div>
-        <p class="kicker"><span class="pip" aria-hidden="true"></span> Expenses · in review</p>
-        <h1>Alcor</h1>
-        <p class="lede">Turn receipts into an expense sheet.</p>
-        <p>Attach receipt photos or PDFs, or paste the text. Alcor gives one row per receipt — date, merchant, gross, VAT, net, currency, category — plus a review list, totals, and a CSV.</p>
-        <blockquote class="say"><span class="say-label">Try saying</span><q>turn these receipts into an expense sheet</q></blockquote>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#alcor-demo">Watch the demo</a>
-          <span class="btn btn-soon" data-chatgpt="alcor">Coming soon to ChatGPT</span>
-        </div>
-        <p class="muted">In review with OpenAI. Not in the ChatGPT directory yet. <a href="/alcor/support/">Support</a></p>
-      </div>
+  <header class="app-top">
+    <span class="icon-frame lg" style="--accent:#0C8F62"><img src="/assets/alcor.png" alt="" width="80" height="80"></span>
+    <div>
+      <h1>Alcor</h1>
+      <p class="app-line">Receipts become expenses.</p>
     </div>
-    <figure class="player player-stage" id="alcor-demo">
-  <button class="player-btn" type="button" data-video="/alcor/demo/alcor-demo.mp4" data-title="Alcor demo: receipts to an expense sheet">
-    <span class="icon-frame md" style="--accent:#0C8F62"><img src="/assets/alcor.png" alt="" width="64" height="64"></span>
-    <span class="play-glyph" aria-hidden="true"></span>
-    <span class="player-label"><strong>Watch the demo</strong><span class="player-note">Plays on click.</span></span>
-  </button>
-  <figcaption><a class="player-file" href="/alcor/demo/alcor-demo.mp4">Open the video file</a></figcaption>
-</figure>
   </header>
-
-  <section>
-    <h2>Why it is worth opening</h2>
-    <ul class="bullets"><li><strong>One row per receipt</strong>Date, merchant, gross, VAT rate and amount, net, currency, category.</li><li><strong>A check before you export</strong>Unreadable fields, uncertain categories, and possible duplicates land on a “Needs your check” list.</li><li><strong>Totals and a CSV</strong>Totals by category and currency. Standard or German semicolon CSV.</li><li><strong>No guessed amounts</strong>Unreadable values stay empty and are flagged.</li></ul>
-  </section>
-
-  <section>
-    <h2>How it works</h2>
-    <ol class="steps"><li>Attach receipt photos or PDFs, or paste receipt text.</li><li>Review the table and the “Needs your check” list.</li><li>Copy the CSV into your spreadsheet, or send it to your accountant.</li></ol>
-  </section>
-
-  <section id="try">
-    <h2>Say it like this</h2>
-    <ul class="prompt-list"><li><code>turn these receipts into an expense sheet</code></li><li><code>turn these receipts into a spreadsheet</code></li><li><code>expense report from these photos</code></li><li><code>prepare these expenses for my accountant as CSV</code></li></ul>
-  </section>
-
-  <section>
-    <h2>What you get</h2>
-    <div class="example">12 receipts → review table → totals by category → <code>expenses.csv</code> for your bookkeeper.</div>
-  </section>
-
-  <section>
-    <h2>Good to know</h2>
-    <ul class="know"><li>Receipt images are read by ChatGPT, not a dedicated OCR engine. Check the values against the receipts before you file them.</li><li>Unreadable amounts stay empty and are flagged, not estimated. Amounts are converted only with an exchange rate you provide.</li><li>You get copy-paste CSV (standard or German). A downloadable file only where ChatGPT can run code.</li><li>No memory across chats. Receipt data is not stored.</li><li>Uses Midchat’s hosted tools at alcor.mcp.midchat.io, with no sign-in. It does not sync to accounting software, submit claims, produce a DATEV import, or advise on deductibility.</li></ul>
-    <p class="fine-print">Free. Runs inside ChatGPT with Midchat’s hosted tools. No sign-in. See <a href="/alcor/privacy/">Privacy</a> · <a href="/alcor/terms/">Terms</a> · <a href="/alcor/support/">Support</a>.</p>
-  </section>
-
-  <section>
-    <h2>The other apps</h2>
-    <nav class="more-apps" aria-label="Other Midchat apps"><a href="/mizar/" style="--accent:#0841E7"><span class="icon-frame" style="--accent:#0841E7"><img src="/assets/mizar.png" alt="" width="36" height="36"></span>Mizar</a><a href="/lyra/" style="--accent:#7A3FF0"><span class="icon-frame" style="--accent:#7A3FF0"><img src="/assets/lyra.png" alt="" width="36" height="36"></span>Lyra</a><a href="/kaus/" style="--accent:#E06A2B"><span class="icon-frame" style="--accent:#E06A2B"><img src="/assets/kaus.png" alt="" width="36" height="36"></span>Kaus</a><a href="/vela/" style="--accent:#0B6FD4"><span class="icon-frame" style="--accent:#0B6FD4"><img src="/assets/vela.png" alt="" width="36" height="36"></span>Vela</a></nav>
-  </section>
+  <figure class="player player-stage" id="alcor-demo">
+  <button class="player-btn" type="button" data-video="/alcor/demo/alcor-demo.mp4" data-title="Alcor demo" aria-label="Watch the Alcor demo">
+    <span class="play-glyph" aria-hidden="true"></span>
+  </button>
+  <noscript><a href="/alcor/demo/alcor-demo.mp4">Watch the alcor demo</a></noscript>
+</figure>
+  <h2 class="sr-only">Try saying</h2>
+  <ul class="prompt-list"><li><q>turn these receipts into an expense sheet</q></li><li><q>expense report from these photos</q></li><li><q>prepare these expenses for my accountant as CSV</q></li></ul>
+  <div class="app-cta"><span class="btn btn-soon" data-chatgpt="alcor">Coming soon to ChatGPT</span></div>
+  <p class="fine-print"><a href="/alcor/privacy/">Privacy</a> · <a href="/alcor/terms/">Terms</a> · <a href="/alcor/support/">Support</a></p>
 </div>
 
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <div>
-      <strong>Midchat</strong>
-      <p>Weekly workflows, done inside ChatGPT. Published by Midchat · midchat.io.</p>
-    </div>
+    <strong>Midchat</strong>
     <nav class="footer-links" aria-label="Footer">
       <a href="/mizar/">Mizar</a>
       <a href="/lyra/">Lyra</a>
@@ -110,9 +67,7 @@
     </nav>
   </div>
   <div class="wrap footer-note">
-    Published by Midchat · midchat.io.
-    Privacy questions: <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>.
-    Legal review of privacy and terms is recommended. Not legal advice.
+    Published by Midchat · midchat.io · <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>. Not legal advice.
   </div>
 </footer>
 <script src="/js/config.js"></script>
