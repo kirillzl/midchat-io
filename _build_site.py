@@ -1,6 +1,13 @@
 #!/usr/bin/env python3
 """Generate the midchat.io static site pages. Run from sites/midchat.io/."""
 from pathlib import Path
+import sys
+
+sys.exit(
+    "This generator is retired. It still describes the old BillFast-era pages and would "
+    "overwrite Mizar, Lyra, Kaus, Alcor, and Vela. Edit the HTML in place. "
+    "ChatGPT directory links live in js/config.js."
+)
 
 ROOT = Path(__file__).resolve().parent
 DOMAIN = "midchat.io"
