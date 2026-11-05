@@ -3,107 +3,175 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Midchat · Midchat</title>
-<meta name="description" content="ChatGPT plugins for invoices, weekly status, meeting actions, expenses, and PDF tables.">
+<script>
+(function(){try{var q=new URLSearchParams(location.search).get("theme");var t=(q==="light"||q==="dark")?q:localStorage.getItem("midchat-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();
+</script>
+<title>Midchat — weekly work inside ChatGPT</title>
+<meta name="description" content="Weekly work, done in ChatGPT. Invoices, updates, actions, expenses, and PDFs.">
+<link rel="canonical" href="https://midchat.io/">
+<meta property="og:title" content="Midchat — weekly work inside ChatGPT">
+<meta property="og:description" content="Weekly work, done in ChatGPT. Invoices, updates, actions, expenses, and PDFs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://midchat.io/">
+<meta name="theme-color" content="#f4f6fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#070a12" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="/css/site.css">
-<style>:root { --accent: #0f172a; }</style>
-<script src="/_g/s.js" data-p="midchat" data-e="https://gible.co/_g/e" defer></script>
+<style>:root { --accent: #0841E7; }</style>
 </head>
 <body>
+<a class="skip" href="#content">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="logo" href="/">midchat<span>.io</span></a>
-    <nav class="nav"><a href="/" class="active">Home</a><a href="/mizar/">Mizar</a><a href="/lyra/">Lyra</a><a href="/kaus/">Kaus</a><a href="/alcor/">Alcor</a><a href="/vela/">Vela</a><a href="/support/">Support</a></nav>
+    <a class="logo" href="/"><span class="logo-mark" aria-hidden="true"></span>midchat<span>.io</span></a>
+    <nav class="nav" id="site-nav" aria-label="Primary"><a href="/" class="active">Home</a><a href="/mizar/">Mizar</a><a href="/lyra/">Lyra</a><a href="/kaus/">Kaus</a><a href="/alcor/">Alcor</a><a href="/vela/">Vela</a><a href="/support/">Support</a></nav>
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch color theme"><svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M4.9 4.9l1.5 1.5M17.6 17.6l1.5 1.5M19.1 4.9l-1.5 1.5M6.4 17.6l-1.5 1.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M15.5 3.6a8.1 8.1 0 1 0 5 12.9A8.4 8.4 0 0 1 15.5 3.6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
   </div>
 </header>
-<main class="wrap">
+<main id="content">
 
-<p class="draft-banner"><strong>Live site — legal review recommended.</strong> Not legal advice; have privacy and terms reviewed for your jurisdiction.</p>
-<section class="hero">
-  <span class="badge">ChatGPT plugins</span>
-  <h1>Work that finishes in the chat.</h1>
-  <p class="lede">
-    Midchat is a suite of ChatGPT plugins for freelancers and operators —
-    invoices, Friday status, meeting actions, expenses, and PDF tables —
-    built to be recommended mid-conversation, not buried in a marketplace.
-  </p>
-  <div class="btn-row">
-    <a class="btn" href="/support/">Support</a>
-    <a class="btn secondary" href="/privacy/">Privacy</a>
-  </div>
-</section>
+<div class="wrap">
+  <section class="hero">
+    <h1>Weekly work,<br> done in ChatGPT.</h1>
+    <p class="lede">Invoices, updates, actions, expenses, PDFs.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#apps">See the apps</a>
+    </div>
+  </section>
 
-<section class="section">
-  <h2>The five plugins</h2>
-  <div class="grid">
-    <article class="card plugin-card" style="--accent:#003DBC">
-      <img class="icon" src="/assets/mizar.png" alt="Mizar icon" width="56" height="56">
-      <h3><a href="/mizar/" style="color:inherit;text-decoration:none">Mizar</a></h3>
-      <p class="meta">Invoices from notes · hosted PDF rendering</p>
-      <p>Paste notes, hours, or a timesheet into ChatGPT. Mizar turns them into a one-page invoice PDF — totals calculated to the cent, VAT per rate, English or German.</p>
-      <p><a href="/mizar/">Learn more →</a></p>
+  <section class="section" id="apps">
+    <h2 class="sr-only">The apps</h2>
+    <div class="features">
+    <article class="feature" id="mizar" style="--accent:#0841E7">
+      <figure class="player player-stage" id="mizar-demo">
+  <button class="player-btn" type="button" data-video="/mizar/demo/mizar-demo.mp4" data-title="Mizar demo" aria-label="Watch the Mizar demo">
+    <span class="play-glyph" aria-hidden="true"></span>
+  </button>
+  <noscript><a href="/mizar/demo/mizar-demo.mp4">Watch the mizar demo</a></noscript>
+</figure>
+      <div class="feature-copy">
+        <a class="feature-id" href="/mizar/">
+          <span class="icon-frame md" style="--accent:#0841E7"><img src="/assets/mizar.png" alt="" width="64" height="64"></span>
+          <span>
+            <h2>Mizar</h2>
+            <p class="app-line">Notes become an invoice.</p>
+          </span>
+        </a>
+        <p class="say"><q>make an invoice from my notes</q></p>
+        <div class="card-actions"><span class="btn btn-soon" data-chatgpt="mizar">Coming soon to ChatGPT</span></div>
+      </div>
     </article>
-    <article class="card plugin-card" style="--accent:#E38217">
-      <img class="icon" src="/assets/lyra.png" alt="Lyra icon" width="56" height="56">
-      <h3><a href="/lyra/" style="color:inherit;text-decoration:none">Lyra</a></h3>
-      <p class="meta">Weekly wrap-up · hosted tools</p>
-      <p>Paste bullets, notes, or a metrics CSV. Get a short client email plus a one-pager with wins, progress, blockers, risks, and next steps. Tone: direct, no fluff.</p>
-      <p><a href="/lyra/">Learn more →</a></p>
+    <article class="feature" id="lyra" style="--accent:#7A3FF0">
+      <figure class="player player-stage" id="lyra-demo">
+  <button class="player-btn" type="button" data-video="/lyra/demo/lyra-demo.mp4" data-title="Lyra demo" aria-label="Watch the Lyra demo">
+    <span class="play-glyph" aria-hidden="true"></span>
+  </button>
+  <noscript><a href="/lyra/demo/lyra-demo.mp4">Watch the lyra demo</a></noscript>
+</figure>
+      <div class="feature-copy">
+        <a class="feature-id" href="/lyra/">
+          <span class="icon-frame md" style="--accent:#7A3FF0"><img src="/assets/lyra.png" alt="" width="64" height="64"></span>
+          <span>
+            <h2>Lyra</h2>
+            <p class="app-line">This week’s client update.</p>
+          </span>
+        </a>
+        <p class="say"><q>write my weekly client update</q></p>
+        <div class="card-actions"><span class="btn btn-soon" data-chatgpt="lyra">Coming soon to ChatGPT</span></div>
+      </div>
     </article>
-    <article class="card plugin-card" style="--accent:#3B3FBC">
-      <img class="icon" src="/assets/kaus.png" alt="Kaus icon" width="56" height="56">
-      <h3><a href="/kaus/" style="color:inherit;text-decoration:none">Kaus</a></h3>
-      <p class="meta">Recurring action lists · hosted tools</p>
-      <p>Paste meeting notes or a transcript. Get a table of owner / action / due date / source quote, plus draft Slack or email follow-ups you send yourself.</p>
-      <p><a href="/kaus/">Learn more →</a></p>
+    <article class="feature" id="kaus" style="--accent:#E06A2B">
+      <figure class="player player-stage" id="kaus-demo">
+  <button class="player-btn" type="button" data-video="/kaus/demo/kaus-demo.mp4" data-title="Kaus demo" aria-label="Watch the Kaus demo">
+    <span class="play-glyph" aria-hidden="true"></span>
+  </button>
+  <noscript><a href="/kaus/demo/kaus-demo.mp4">Watch the kaus demo</a></noscript>
+</figure>
+      <div class="feature-copy">
+        <a class="feature-id" href="/kaus/">
+          <span class="icon-frame md" style="--accent:#E06A2B"><img src="/assets/kaus.png" alt="" width="64" height="64"></span>
+          <span>
+            <h2>Kaus</h2>
+            <p class="app-line">Meetings become action lists.</p>
+          </span>
+        </a>
+        <p class="say"><q>turn these meeting notes into action items</q></p>
+        <div class="card-actions"><span class="btn btn-soon" data-chatgpt="kaus">Coming soon to ChatGPT</span></div>
+      </div>
     </article>
-    <article class="card plugin-card" style="--accent:#8331E5">
-      <img class="icon" src="/assets/alcor.png" alt="Alcor icon" width="56" height="56">
-      <h3><a href="/alcor/" style="color:inherit;text-decoration:none">Alcor</a></h3>
-      <p class="meta">Receipts → expenses · hosted tools</p>
-      <p>Attach receipt photos or PDFs. Get one row per receipt with date, merchant, gross, VAT, net, currency, and category — plus a review list before export.</p>
-      <p><a href="/alcor/">Learn more →</a></p>
+    <article class="feature" id="alcor" style="--accent:#0C8F62">
+      <figure class="player player-stage" id="alcor-demo">
+  <button class="player-btn" type="button" data-video="/alcor/demo/alcor-demo.mp4" data-title="Alcor demo" aria-label="Watch the Alcor demo">
+    <span class="play-glyph" aria-hidden="true"></span>
+  </button>
+  <noscript><a href="/alcor/demo/alcor-demo.mp4">Watch the alcor demo</a></noscript>
+</figure>
+      <div class="feature-copy">
+        <a class="feature-id" href="/alcor/">
+          <span class="icon-frame md" style="--accent:#0C8F62"><img src="/assets/alcor.png" alt="" width="64" height="64"></span>
+          <span>
+            <h2>Alcor</h2>
+            <p class="app-line">Receipts become expenses.</p>
+          </span>
+        </a>
+        <p class="say"><q>turn these receipts into an expense sheet</q></p>
+        <div class="card-actions"><span class="btn btn-soon" data-chatgpt="alcor">Coming soon to ChatGPT</span></div>
+      </div>
     </article>
-    <article class="card plugin-card" style="--accent:#058578">
-      <img class="icon" src="/assets/vela.png" alt="Vela icon" width="56" height="56">
-      <h3><a href="/vela/" style="color:inherit;text-decoration:none">Vela</a></h3>
-      <p class="meta">PDF tables → Sheets · hosted tools</p>
-      <p>Attach a PDF. Get every table in source order with cleaned headers, ISO dates, plain decimals, a preview, and a totals check. Multi-page tables are stitched.</p>
-      <p><a href="/vela/">Learn more →</a></p>
-    </article></div>
-</section>
+    <article class="feature" id="vela" style="--accent:#0B6FD4">
+      <figure class="player player-stage" id="vela-demo">
+  <button class="player-btn" type="button" data-video="/vela/demo/vela-demo.mp4" data-title="Vela demo" aria-label="Watch the Vela demo">
+    <span class="play-glyph" aria-hidden="true"></span>
+  </button>
+  <noscript><a href="/vela/demo/vela-demo.mp4">Watch the vela demo</a></noscript>
+</figure>
+      <div class="feature-copy">
+        <a class="feature-id" href="/vela/">
+          <span class="icon-frame md" style="--accent:#0B6FD4"><img src="/assets/vela.png" alt="" width="64" height="64"></span>
+          <span>
+            <h2>Vela</h2>
+            <p class="app-line">PDF tables become a spreadsheet.</p>
+          </span>
+        </a>
+        <p class="say"><q>turn this PDF table into a spreadsheet</q></p>
+        <div class="card-actions"><span class="btn btn-soon" data-chatgpt="vela">Coming soon to ChatGPT</span></div>
+      </div>
+    </article>
+    </div>
+  </section>
 
-<section class="section">
-  <h2>Publisher</h2>
-  <p class="muted">
-    Built and published by <strong>Midchat</strong> (midchat.io).
-    Contact: <a href="mailto:support@midchat.io">support@midchat.io</a> ·
-    Privacy: <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>
-  </p>
-  <p class="muted">
-    Each plugin uses Midchat’s hosted MCP tools (no sign-in): Mizar at <code>https://mcp.midchat.io/mcp</code>,
-    the others at <code>https://&lt;plugin&gt;.mcp.midchat.io/mcp</code>. Content is processed only to return the
-    result and is not stored — see each plugin’s privacy page.
-  </p>
-</section>
+  <section class="section" id="how">
+    <h2 class="how-title">How it works</h2>
+    <ol class="mini-steps">
+      <li><span>1</span>Say the job</li>
+      <li><span>2</span>Check the draft</li>
+      <li><span>3</span>Send it yourself</li>
+    </ol>
+  </section>
+</div>
 
 </main>
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <div>
-      <strong>Midchat</strong> — ChatGPT plugins for mid-conversation work.<br>
-      Published by Midchat · midchat.io
-    </div>
-    <div class="footer-links">
+    <strong>Midchat</strong>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/mizar/">Mizar</a>
+      <a href="/lyra/">Lyra</a>
+      <a href="/kaus/">Kaus</a>
+      <a href="/alcor/">Alcor</a>
+      <a href="/vela/">Vela</a>
       <a href="/privacy/">Privacy</a>
       <a href="/terms/">Terms</a>
       <a href="/support/">Support</a>
       <a href="mailto:support@midchat.io">support@midchat.io</a>
-    </div>
+    </nav>
   </div>
   <div class="wrap footer-note">
-    Published by Midchat · midchat.io. Legal review of privacy/terms recommended. Not legal advice.
+    Published by Midchat · midchat.io · <a href="mailto:privacy@midchat.io">privacy@midchat.io</a>. Not legal advice.
   </div>
 </footer>
+<script src="/js/config.js"></script>
+<script src="/js/site.js" defer></script>
+<script src="/_g/s.js" data-p="midchat" data-e="https://gible.co/_g/e" defer></script>
 </body>
 </html>
