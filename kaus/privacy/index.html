@@ -26,7 +26,7 @@
 <p class="draft-banner"><strong>Live site — legal review recommended.</strong> Not legal advice; have privacy and terms reviewed for your jurisdiction.</p>
 <article class="legal">
   <h1>Kaus — Privacy Policy</h1>
-  <p class="muted">Last updated: 2026-11-09 (version 1.1.0, hosted server)</p>
+  <p class="muted">Last updated: 2026-11-17 (version 1.1.0, hosted server)</p>
 
   <h2>Who we are</h2>
   <p>
@@ -44,7 +44,7 @@
     <li>Your conversation itself is processed by <strong>OpenAI</strong> under OpenAI’s terms and privacy policy: <a href="https://openai.com/policies/privacy-policy">openai.com/policies/privacy-policy</a>.</li>
   </ul>
 
-  <p>This server keeps anonymous usage counts: for each tool call we log only the plugin name, tool name, time, whether it succeeded and how long it took, and never your content, files or identifiers.</p>
+  <p>This server keeps anonymous usage counts: for each tool call we log only the plugin name, tool name, time, whether it succeeded and how long it took, and never your content, files or raw identifiers. Each tool call logs a short one-way hashed version of the anonymous conversation and user identifiers ChatGPT provides (not raw IDs), keyed with a secret and rotated monthly, used only to count distinct conversations and users; no names, emails, IP addresses, user agents, tool arguments or content are logged.</p>
 
   <h2>What the server receives</h2>
   <p>When ChatGPT calls a Kaus tool it sends content you provided in the conversation: the meeting notes or transcript you pasted (which can include participant names and what they said), the meeting date and timezone if you gave them, the action items (owner, action, due date, source quote), ambiguity and parking-lot notes, an optional meeting title and summary, and an optional sender name for the follow-up drafts. Kaus’s tools do <strong>not</strong> ask for or receive your chat history, files, location, or account identifiers.</p>
